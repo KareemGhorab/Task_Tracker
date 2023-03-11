@@ -2,6 +2,9 @@
   <app-task
     *ngFor="let task of tasks"
     [task]="task"
-    (click)="deleteTask(task)"
+    (handleClick)="deleteTask(task)"
+    (handleDblClick)="toggleFinished(task)"
+    (handleReminderToggle)="toggleReminder(task)"
+    (handleUpdate)="showUpdateModal(task)"
   ></app-task>
 </section>

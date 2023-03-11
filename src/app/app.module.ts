@@ -6,7 +6,8 @@ import { AppComponent } from './app.component'
 import { HeaderComponent } from './components/header/header.component'
 import { ButtonComponent } from './components/ui/button/button.component'
 import { TaskComponent } from './components/task/task.component'
-import { TasksMenuComponent } from './components/tasks-menu/tasks-menu.component'
+import { TasksMenuComponent } from './components/tasks-menu/tasks-menu.component';
+import { ModalComponent } from './components/ui/modal/modal.component'
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { TasksMenuComponent } from './components/tasks-menu/tasks-menu.component
     ButtonComponent,
     TaskComponent,
     TasksMenuComponent,
+    ModalComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],

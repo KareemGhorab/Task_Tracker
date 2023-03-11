@@ -1,22 +1,23 @@
 {
   "tasks": [
+    { "id": 1, "name": "Study Angular", "day": "10/3/2023", "reminder": true },
     {
       "id": 1,
-      "name": "Study Angular",
-      "day": "3/10/2023",
+      "name": "Problem Solving with Java",
+      "day": "11/3/2023",
       "reminder": true
     },
     {
-      "id": 2,
-      "name": "Study SpringBoot",
-      "day": "4/10/2023",
-      "reminder": true
-    },
-    {
-      "id": 3,
-      "name": "Organize the Task Tracker",
-      "day": "5/10/2023",
+      "id": 1,
+      "name": "Organize the task tracker",
+      "day": "12/3/2023",
       "reminder": false
+    },
+    {
+      "id": 1,
+      "name": "Work for Valeo :D",
+      "day": "13/3/2023",
+      "reminder": true
     }
   ]
 }

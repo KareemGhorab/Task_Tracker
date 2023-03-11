@@ -7,13 +7,34 @@ import { Task } from '../types/Task'
   styleUrls: ['./task.component.css'],
 })
 export class TaskComponent {
-  @Input() task: Task = { id: 0, name: 'Test', day: 'Test', reminder: false }
+  @Input() task: Task = {
+    id: 0,
+    name: 'Test',
+    day: 'Test',
+    reminder: false,
+    finished: false,
+  }
 
-  @Output() click = new EventEmitter()
+  @Output() handleClick = new EventEmitter()
+  @Output() handleDblClick = new EventEmitter()
+  @Output() handleReminderToggle = new EventEmitter()
+  @Output() handleUpdate = new EventEmitter()
 
   constructor() {}
 
   onDelete() {
-    this.click.emit()
+    this.handleClick.emit()
+  }
+
+  toggleFinished() {
+    this.handleDblClick.emit()
+  }
+
+  onToggleReminder() {
+    this.handleReminderToggle.emit()
+  }
+
+  onUpdate() {
+    this.handleUpdate.emit()
   }
 }

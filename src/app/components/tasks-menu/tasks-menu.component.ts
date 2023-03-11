@@ -23,4 +23,18 @@ export class TasksMenuComponent implements OnInit {
         () => (this.tasks = this.tasks.filter((t) => t.id !== task.id))
       )
   }
+
+  toggleFinished(task: Task) {
+    task.finished = !task.finished
+    this.taskService.updateTask(task)
+  }
+
+  toggleReminder(task: Task) {
+    task.reminder = !task.reminder
+    this.taskService.updateTask(task)
+  }
+
+  showUpdateModal(task: Task) {
+    
+  }
 }
