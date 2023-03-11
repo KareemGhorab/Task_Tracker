@@ -15,4 +15,12 @@ export class TasksMenuComponent implements OnInit {
   ngOnInit(): void {
     this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks))
   }
+
+  deleteTask(task: Task) {
+    this.taskService
+      .deleteTask(task.id)
+      .subscribe(
+        () => (this.tasks = this.tasks.filter((t) => t.id !== task.id))
+      )
+  }
 }

@@ -1,25 +1,21 @@
 import { Injectable } from '@angular/core'
-import { Observable, of } from 'rxjs'
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs'
 import { Task } from '../components/types/Task'
 
 @Injectable({
   providedIn: 'root',
 })
 export class TaskService {
-  constructor() {}
+  private apiUrl: string = 'http://localhost:3000/tasks'
+
+  constructor(private httpClient: HttpClient) {}
 
   getTasks(): Observable<Task[]> {
-    const tasks = of([
-      { id: 1, name: 'Study Angular', day: '3/10/2023', reminder: true },
-      { id: 2, name: 'Study SpringBoot', day: '4/10/2023', reminder: true },
-      {
-        id: 3,
-        name: 'Organize the Task Tracker',
-        day: '5/10/2023',
-        reminder: false,
-      },
-      { id: 4, name: 'Work for Valeo :D', day: '6/10/2023', reminder: true },
-    ])
-    return tasks
+    return this.httpClient.get<Task[]>(this.apiUrl)
+  }
+
+  deleteTask(id: number): Observable<Task> {
+    return this.httpClient.delete<Task>(this.apiUrl + `/${id}`)
   }
 }

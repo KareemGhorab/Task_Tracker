@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { HttpClientModule } from '@angular/common/http'
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { ButtonComponent } from './components/ui/button/button.component';
-import { TaskComponent } from './components/task/task.component';
-import { TasksMenuComponent } from './components/tasks-menu/tasks-menu.component';
+import { AppComponent } from './app.component'
+import { HeaderComponent } from './components/header/header.component'
+import { ButtonComponent } from './components/ui/button/button.component'
+import { TaskComponent } from './components/task/task.component'
+import { TasksMenuComponent } from './components/tasks-menu/tasks-menu.component'
 
 @NgModule({
   declarations: [
@@ -13,12 +14,10 @@ import { TasksMenuComponent } from './components/tasks-menu/tasks-menu.component
     HeaderComponent,
     ButtonComponent,
     TaskComponent,
-    TasksMenuComponent
+    TasksMenuComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

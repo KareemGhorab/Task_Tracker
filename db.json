@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Study Angular",
+      "day": "3/10/2023",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "name": "Study SpringBoot",
+      "day": "4/10/2023",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "name": "Organize the Task Tracker",
+      "day": "5/10/2023",
+      "reminder": false
+    }
+  ]
+}

@@ -1,11 +1,12 @@
 <article
   class="bg-neutral-200 font-semibold rounded p-4 flex justify-between items-center"
+  [ngClass]="{ reminder: task.reminder }"
 >
   <div>
     <p class="text-xl">{{ task.name }}</p>
     <p>{{ task.day }}</p>
   </div>
-  <button>
+  <button (click)="onDelete()">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"

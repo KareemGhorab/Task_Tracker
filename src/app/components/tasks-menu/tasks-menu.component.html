@@ -1,3 +1,7 @@
 <section class="grid gap-3">
-  <app-task *ngFor="let task of tasks" [task]="task"></app-task>
+  <app-task
+    *ngFor="let task of tasks"
+    [task]="task"
+    (click)="deleteTask(task)"
+  ></app-task>
 </section>
